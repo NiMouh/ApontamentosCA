@@ -59,6 +59,7 @@ Para **decifrar**:
  - Input: Texto-cifrado, Chave secreta
  - Output: Texto-limpo
 
+Nota: **Não** são recomendas para cifrar **grandes quantidades** de dados (bulk encryption), pois são mais lentas que as cifras de chave simétrica.
 
 #### Cifras de chave simétrica continuas
 As cifras de chave simétrica continuas usam um algoritmo que a partir de uma chave com tamanho **fixo** e **comportável**, geral uma sequência tão grande quanto necessária para cifrar um ficheiro. Este tipo de cifra tem como defeito a sua **maneabilidade** (facilidade da alteração do texto cifrado). Se cifrarmos um ficheiro já antes cifrado com a **mesma chave**, iremos obter o texto-limpo.

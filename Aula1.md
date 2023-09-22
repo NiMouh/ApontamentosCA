@@ -71,11 +71,6 @@ O algoritmo para **decifrar** é diferente que o de **cifrar**. A diferença ent
 
 Nota: Este tipo de cifra é mais segura, dependendo de como são usadas, quando o canal de comunicação permite a **alteração** da mensagem cifrada, sem que a mensagem perca a sua **integridade**.
 
-#### *Padding* (Preenchimento)
-O **padding** é uma técnica de preenchimento de dados que consiste em adicionar um número de bytes ao final de um bloco de dados, de forma a que o tamanho do bloco de dados seja múltiplo do tamanho do bloco de dados da cifra.
-
-Nota: O último bloco tem sempre *padding*, mesmo que o bloco da mensagem seja múltiplo do tamanho do bloco da cifra é acrescentado um bloco de *padding*.
-
 ### Tipos de ataques
 Alguns exemplos dos tipos de ataques mais comuns:
 

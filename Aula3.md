@@ -1,6 +1,6 @@
 # Aula 3 - Modos de Cifra
 
-## Cifra DES
+## Cifra AES
 
 ### *Eletronic Code Book* (ECB)
 O **ECB** é um modo de operação de cifra que consiste em cifrar cada bloco de dados de forma independente. Ou seja, o bloco de dados é cifrado com a mesma chave, mas o resultado é diferente (caso os blocos não sejam iguais) para cada bloco de dados.
@@ -58,3 +58,31 @@ Exemplo a **cifrar**:
 
 ### Ciphertext Feedback Mode (CFM)
 O **CFM**  é um modo de operação de cifra que consiste...
+
+Exemplo a **cifrar**:
+ - Recebe um bloco de texto-limpo;
+ - Recebe um vetor de inicialização (IV);
+ - É cifrado o IV **anterior** com a chave (neste caso o IV é obtido através da operação xOr entre o IV cifrado e o bloco de texto-limpo);
+ - Processo repete-se, usando o IV do bloco anterior, até ao fim da mensagem;
+
+Exemplo a **decifrar**:
+ - Recebe um bloco de texto-cifrado;
+ - Recebe um vetor de inicialização (IV);
+ - É decifrado usando o IV cifrado na primeira iteração;
+ - As restantes iterações usa como IV o bloco de texto-cifrado anterior e é feito o xOr com o bloco de texto-cifrado atual;
+ - Processo repete-se, até ao fim da mensagem;
+
+### *Randomized Couter Mode* (CTR)
+O **CTR** é um modo de operação de cifra que consiste em cifrar através de uma chave de cifra de forma simétrica e continua a partir de uma cifra de blocos.
+
+Exemplo para **cifrar**:
+ - Recebe um bloco de texto-limpo;
+ - Cria um contador (CTR) - do mesmo tamanho que o bloco, gerado aleatóriamente através da chave de cifra;
+ - Faz o XOR entre o bloco de texto-limpo e o contador;
+
+Exemplo para **decifrar**:
+ - Recebe um bloco de texto-cifrado;
+ - Cria um contador (CTR) - do mesmo tamanho que o bloco, gerado aleatóriamente através da chave de cifra;
+ - Faz o XOR entre o bloco de texto-cifrado e o contador;
+
+Nota: Sendo ela uma cifra de chave simétrica contínua, ela fica **maneável**.

@@ -1,18 +1,4 @@
-# Aula 1
-
-## Teórica - História e conceitos fundamentais da criptografia
-
-### Conceitos base
-Objetivo inicial da criptografia: Garantir que a mensagem da pessoa A chegue a pessoa B sem que a pessoa C consiga ler.
-
-1. **Texto-limpo**: mensagem original.
-2. **Cifra ou Esquema Criptográfico**: algoritmo que transforma o texto-limpo em texto-cifrado e vice-versa (por norma são dois algoritmos diferentes).
-3. **Criptograma**: texto-cifrado.
-4. **Chave de cifra**: conjunto de dados que permite a cifrar e/ou decifrar do texto-limpo.
-5. **Sistema criptográfico**: conjunto de cifra, chave de cifra, conjunto de decifra e chave de decifra.
-6. **Modelo de ataque**: classificação para um possível ataque ao sistema criptográfico.
-7. **Ataque**: Tentativa de quebra dos objetivos da técnica criptográfica.
-8. **Criptanálise**: Conjunto de técnicas que visam a quebra de sistemas criptográficos. Consistem em decifrar sem saber a chave ou tendo a chave.
+# Aula 1 - Criptografia Moderna
 
 ### Cifras
 Estas são algumas das propriedades que uma cifra segura tem:
@@ -23,15 +9,6 @@ Estas são algumas das propriedades que uma cifra segura tem:
  - **Não determinística**: Esta propriedade permite que a cifra produza saídas diferentes para o mesmo texto limpo e chave de cifra.
 
 Nota: Todas estas propriedades acima têm que ser balenceadas com a **usabilidade** da cifra.
-
-#### Cifras clássicas
-São algoritmos que utilizam a mesma chave para cifrar e decifrar. Cifras clássicas têm **um** algoritmo (para cifrar e para decifrar).
-
-Alguns Exemplos:
- - Cifra de César;
- - Cifra de Vigenère (mais difusa que a de César);
- - Cifra Enigma;
- - Cifra de Vernam (perfeita em termos de secretismo, contudo não é usável);
 
 #### Cifras de chave simétrica
 São algoritmos que utilizam a **mesma chave** para **cifrar** e **decifrar** (simétrica). Cifras de chave simétrica têm **dois** algoritmos (para cifrar e para decifrar).
@@ -69,7 +46,7 @@ Nota: Estas cifras são usadas em situações em que o canal de comunicação n�
 #### Cifras de chave simétrica de bloco
 O algoritmo para **decifrar** é diferente que o de **cifrar**. A diferença entre as cifras de chave simétrica de bloco e as cifras de chave simétrica continua é que as cifras de chave simétrica de bloco geram uma cifra de tamanho fixo (bloco) e não uma cifra de tamanho variável. Caso a cifra de chave simétrica de bloco seja alterada (maneada), o texto cifrado perderá toda a sua integridade.
 
-Nota: Este tipo de cifra é mais segura, dependendo de como são usadas, quando o canal de comunicação permite a **alteração** da mensagem cifrada, sem que a mensagem perca a sua **integridade**.
+Nota: Este tipo de cifra é mais segura, dependendo de como são usadas, quando o canal de comunicação permite a **alteração** da mensagem cifrada, sem que a mensagem perca a sua **integridade**. Cifras de chave pública são sempre por blocos, não existem cifras de chave pública contínuas.
 
 ### Tipos de ataques
 Alguns exemplos dos tipos de ataques mais comuns:

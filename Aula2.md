@@ -9,11 +9,18 @@
 ## Redes de Feistel
 São funções sempre **invertíveis**, mas construídas a partir de funções que podem não ter inversa. É uma forma engenhosa de construir funções **pseudoaleatórias** (PRFs) e permutações **pseudoaleatórias** (PRPs).
 
-A redes funciona na seguinte forma:
+A redes funciona na seguinte forma, para cifrar:
  1. Recebe um bloco de texto-limpo;
  2. Divide o bloco em duas partes (R0 e L0);
  3. Aplica uma função f sobre R, aplica o xOR dela com L e obtém R1;
  4. O R0 transita para L1;
+ 5. O processo repete-se 'n' vezes;
+
+Para decifrar:
+ 1. Recebe um bloco de texto-cifrado;
+ 2. Divide o bloco em duas partes (R0 e L0);
+ 3. Aplica uma função f sobre o L0, e aplica o xOR dela com o R0 e obtém o L1;
+ 4. O L0 transita para R1;
  5. O processo repete-se 'n' vezes;
 
 Nota: Rackoff também refere que para uma PRP (Pseudo random permutations) ser **segura**, a rede de feistel tem de ser com pelo menos **três rondas**. O **DES** especifica 16 rondas, enqquanto que o **3DES** usa 48. O **AES** não usa redes de Feistel no seu núcleo.
@@ -24,8 +31,19 @@ Nota: Rackoff também refere que para uma PRP (Pseudo random permutations) ser *
 - AES (Advanced Encryption Standard): 128 bits de bloco, 128, 192 ou 256 bits de chave;
 - Cipher Blowfish, RCS, etc.;
 
-## Linear Feedback Shift Register (LFSR)
+## Arquitetura AES (Advanced Encription Standard)
+Funciona da seguinte forma:
+ 1. Divide o texto-limpo em blocos de 128 bits (16 bytes);
+ 2. É fornecida uma chave de cifragem;
+ 3. É calculado o **número de rodadas** dependendo do tamanho da chave (128 bits = 10 rondas, 192 bits = 12 rondas, 256 bits = 14 rondas);
+ 4. A chave é expandida em várias sub-chaves, uma para cada rodada;
+ 5. Após todas as rodadas é obtido o texto cifrado.
 
+Em cada **rodada**:
+ 1. AddRoundKey: o bloco é combinado com uma sub-chave exclusiva daquela rodada usando o XOR, o resultado é uma matriz 4x4 (16 bytes);
+ 2. SubBytes: cada byte no bloco é substituído por outro byte de acordo com uma tabela de substituição (S-box);
+ 3. Shiftrows: as linhas no bloco são permutadas (movidas) para a esquerda, essas permutação podem variar (0,1,2 e 3);
+ 4. MixColumns: as colunas no bloco são permutadas;
 
 # Prática 2
 

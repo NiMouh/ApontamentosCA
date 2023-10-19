@@ -21,6 +21,16 @@ Exemplo para **decifrar**:
 | Algoritmo | AES-d(k,c[0]) | AES-d(k,c[1]) | AES-d(k,c[2]) |
 | Limpo     | aaaaaaa       | bbbbbbb       | aaaaaaa       |
 
+**Vantagens** deste modo:
+ - Permite o acesso aleatório a dados cifrados.
+ - Permite processamento paralelo da informação.
+ - Não tem problemas de propagação de erros entre blocos.
+**Desvantagens** deste modo:
+ - Não é seguro a ataques COA (*Cipher-Only attack*) e ataques por *code book* (compilação de pares texto limpo/criptograma).
+ - Não permite pré-processamento.
+ - O último bloco necessita sempre de preenchimento.
+ - Erros de sincronização são irrecuperáveis.
+
 ### *Cipher Block Chaining* (CBC)
 O **CBC** é um modo de operação de cifra que consiste em cifrar cada bloco de dados de forma dependente do bloco anterior. Ou seja, o bloco de dados é cifrado com a mesma chave, mas o resultado é diferente (mesmo os blocos sendo iguais) para cada bloco de dados. Este método evita **alguns** ataques por maninupulação de blocos.
 
@@ -39,7 +49,16 @@ Exemplo para **decifrar**:
  - Esse bloco cifrado é enviado para o bloco seguinte e irá ser feito o XOR com o bloco seguinte após ser decifrado;
  - Processo repete-se até ao fim da mensagem;
 
-Nota: Não suporta processamento paralelo a **cifrar** mas suporta a **decifrar**.
+**Vantagens** deste modo:
+ - É seguro contra ataques CPA (*Chosen-Plaintext Attack*).
+ - Os padrões são mascarados pelo XOR e efeito cascata.
+ - Textos limpos iguais resultam em criptogramas distintos, inviabilizando ataques por *code book*.
+ - Permite o acesso aleatório a dados cifrados.
+ - Permite processamento paralelo da informação cifrada.
+**Desvantagens** deste modo:
+ - Ataques por manipulação do IV podem não ser detetáveis.
+ - Não permite processamento paralelo da informação na cifragem. 
+ - Erros de perda de bits são irrecuperáveis e um erro num bit afeta o bloco de texto limpo correspondente e o seguinte (cascata).
 
 #### *Padding* (Preenchimento)
 O **padding** é uma técnica de preenchimento de dados que consiste em adicionar um número de bytes ao final de um bloco de dados, de forma a que o tamanho do bloco de dados seja múltiplo do tamanho do bloco de dados da cifra.
@@ -85,4 +104,12 @@ Exemplo para **decifrar**:
  - Cria um contador (CTR) - do mesmo tamanho que o bloco, gerado aleatóriamente através da chave de cifra;
  - Faz o XOR entre o bloco de texto-cifrado e o contador;
 
-Nota: Sendo ela uma cifra de chave simétrica contínua, ela fica **maneável**.
+**Vantagens** deste modo:
+ - É seguro contra ataques CPA (*Chosen-Plaintext Attack*).
+ - Os padrões do texto-limpo são mascarados por imitar o processo de uma cifra contínua.
+ - Textos-limpos iguais resultam em criptogramas distintos, inviabilizando ataques por *code book*.
+ - Permite o acesso aleatório a dados cifrados.
+ - Permite o processamento paralelo da informação.
+**Desvantagens** deste modo:
+ - Sendo ela uma cifra de chave simétrica contínua, ela fica **maneável**.
+ - Erros de perda bits são irrecuperáveis.

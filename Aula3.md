@@ -65,8 +65,8 @@ O **padding** é uma técnica de preenchimento de dados que consiste em adiciona
 
 Nota: O último bloco tem sempre *padding*, mesmo que o bloco da mensagem seja múltiplo do tamanho do bloco da cifra é acrescentado um bloco de *padding*.
 
-### Output Feeback Mode (OFM)
-O **OFM**  é um modo de operação de cifra que consiste...
+### *Output Feeback Mode* (OFM)
+O **OFM**  é um modo de operação de cifra que consiste em cifrar o IV com a chave e fazer o XOR entre o resultado e o bloco de texto-limpo.
 
 Exemplo a **cifrar**:
 - Recebe um bloco de texto-limpo;
@@ -75,8 +75,16 @@ Exemplo a **cifrar**:
 - É feito o XOR entre o bloco de texto-limpo e o resultado do IV cifrado;
 - Processo repete-se, usando o IV do bloco anterior, até ao fim da mensagem;
 
-### Ciphertext Feedback Mode (CFM)
-O **CFM**  é um modo de operação de cifra que consiste...
+**Vantagens** deste modo:
+ - Permite pré-processamento.
+ - Permite processamento paralelo da informação (caso, seja feito o pré-processamento).
+ - Permite acesso aleatório a dados cifrados (caso, seja feito o pré-processamento).
+**Desvantagens** deste modo:
+ - Sendo ela uma cifra de chave simétrica contínua, ela fica **maneável**.
+ - Erros de perda bits são irrecuperáveis.
+
+### *Ciphertext Feedback Mode* (CFM)
+O **CFM**  é um modo de operação de cifra que consiste em cifrar o IV com a chave e fazer o XOR entre o resultado e o bloco de texto-limpo. A diferença entre o CFM e o OFM é que o CFM usa o bloco de texto-cifrado anterior e não o IV cifrado.
 
 Exemplo a **cifrar**:
  - Recebe um bloco de texto-limpo;
@@ -90,6 +98,13 @@ Exemplo a **decifrar**:
  - É decifrado usando o IV cifrado na primeira iteração;
  - As restantes iterações usa como IV o bloco de texto-cifrado anterior e é feito o xOr com o bloco de texto-cifrado atual;
  - Processo repete-se, até ao fim da mensagem;
+
+**Vantagens** deste modo:
+ - Permite processamento em paralelo para a decifragem.
+ - Existe a capacidade de recuperação de erros.
+**Desvantagens** deste modo:
+ - Sendo ela uma cifra de chave simétrica contínua, ela fica **maneável**.
+ - Um erro pode propagar-se para os bits seguintes.
 
 ### *Randomized Couter Mode* (CTR)
 O **CTR** é um modo de operação de cifra que consiste em cifrar através de uma chave de cifra de forma simétrica e continua a partir de uma cifra de blocos.

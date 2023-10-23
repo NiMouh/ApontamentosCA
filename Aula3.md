@@ -23,6 +23,7 @@ Exemplo para **decifrar**:
  - Permite o acesso aleatório a dados cifrados.
  - Permite processamento paralelo da informação.
  - Não tem problemas de propagação de erros entre blocos.
+
 **Desvantagens** deste modo:
  - Não é seguro a ataques COA (*Cipher-Only attack*) e ataques por *code book* (compilação de pares texto limpo/criptograma).
  - Não permite pré-processamento.
@@ -53,6 +54,7 @@ Exemplo para **decifrar**:
  - Textos limpos iguais resultam em criptogramas distintos, inviabilizando ataques por *code book*.
  - Permite o acesso aleatório a dados cifrados.
  - Permite processamento paralelo da informação cifrada.
+
 **Desvantagens** deste modo:
  - Ataques por manipulação do IV podem não ser detetáveis.
  - Não permite processamento paralelo da informação na cifragem. 
@@ -77,6 +79,7 @@ Exemplo a **cifrar**:
  - Permite pré-processamento.
  - Permite processamento paralelo da informação (caso, seja feito o pré-processamento).
  - Permite acesso aleatório a dados cifrados (caso, seja feito o pré-processamento).
+
 **Desvantagens** deste modo:
  - Sendo ela uma cifra de chave simétrica contínua, ela fica **maneável**.
  - Erros de perda bits são irrecuperáveis.
@@ -100,6 +103,7 @@ Exemplo a **decifrar**:
 **Vantagens** deste modo:
  - Permite processamento em paralelo para a decifragem.
  - Existe a capacidade de recuperação de erros.
+
 **Desvantagens** deste modo:
  - Sendo ela uma cifra de chave simétrica contínua, ela fica **maneável**.
  - Um erro pode propagar-se para os bits seguintes.
@@ -124,6 +128,7 @@ Exemplo para **decifrar**:
  - Textos-limpos iguais resultam em criptogramas distintos, inviabilizando ataques por *code book*.
  - Permite o acesso aleatório a dados cifrados.
  - Permite o processamento paralelo da informação.
+
 **Desvantagens** deste modo:
  - Sendo ela uma cifra de chave simétrica contínua, ela fica **maneável**.
  - Erros de perda bits são irrecuperáveis.

@@ -31,7 +31,7 @@ Consiste em encontrar o valor de um número inteiro (exponencial) que é utiliza
 Nota: A definição mais geral do problema recorre apenas a grupos cíclicos, aplicando-se, por isso a outros grupos diferentes de números primos. O melhor algoritmo conhecido para resolver o problema do logaritmo discreto é conhecido por *general number field sieve*, determinando o tamanho que o número tem de ter para que o problema seja considerado seguro.
 
 ### Problema da fatorização de números compostos
-Consiste em decompor um número composto nos seus fatores primos. Por exemplo, se tivermos o número 15, ele pode ser decomposto em 3 e 5, que são números primos. O problema da fatorização torna-se difícil à medida que os números tornam-se maiores, e isso é utilizado em esquemas de criptografia de chave pública baseados em algoritmos como o RSA. A segurança desses esquemas depende do fato de que a fatorização de números grandes em fatores primos é computacionalmente difícil de ser realizada em tempo razoável, tornando a criptografia de chave pública segura contra ataques de criptoanálise.
+Consiste no facto de ser é computacionalmente inviável fatorizar um número composto pelo produto de dois números primos grandes. Por exemplo, se tivermos o número 15, ele pode ser decomposto em 3 e 5, que são números primos. O problema da fatorização torna-se difícil à medida que os números tornam-se maiores, e isso é utilizado em esquemas de criptografia de chave pública baseados em algoritmos como o RSA. 
 
 ## Assinatura Digital
 Os esquemas de assinatura digital atuais são normalmente construídos usando criptografia de chave pública. Estas são algumas das propriedades:
@@ -61,7 +61,7 @@ Funciona da seguinte forma:
 6. Bob calcula (G^A mod P)^B mod P;
 7. Ambos obtêm o mesmo resultado, que é a chave secreta partilhada.
 
-## NÃO SAÍ ELGAMAL!! 
+## NÃO SAI ELGAMAL!! 
 
 
 Continua na [Aula 6](Aula6.md)

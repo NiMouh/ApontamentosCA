@@ -17,7 +17,7 @@ Há várias formas de construir um MAC, algumas delas são:
 
 As **três formas** possíveis de combinar os dois mecanismos são:
  - *MAC and Encrypt*: Processo onde é calculado o MAC **através da mensagem** e depois é cifrada a mensagem concatenando o com o MAC (e.g. SSH);
- - *MAC then Encrypt*: Processo onde é calculado o MAC **através da mensagem** e depois é cifrada a mensagem concatenando o com o MAC (e.g. TLS);
+ - *MAC then Encrypt*: Processo onde é calculado o MAC **através da mensagem** e depois é cifrado MAC dessa mensagem (e.g. TLS);
  - *Encrypt then MAC*: Processo onde é calculado o MAC **através da mensagem cifrada** (e.g. IPsec).
 
 **Nota:** A forma considerada **correta** é a *encrypt then MAC*, e devem ser usadas **chaves diferentes** para o MAC e para a cifragrem.

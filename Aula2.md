@@ -45,6 +45,8 @@ Em cada **rodada**:
  3. Shiftrows: as linhas no bloco são permutadas (movidas) para a esquerda, essas permutação podem variar (0,1,2 e 3);
  4. MixColumns: as colunas no bloco são permutadas;
 
+Continua na [Aula 3](Aula3.md)
+
 # Prática 2
 
 ## Até ao Exercício 6.1

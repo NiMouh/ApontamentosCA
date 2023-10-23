@@ -25,7 +25,7 @@ Para **decifrar**:
 São algoritmos que utilizam **chaves diferentes** para **cifrar** e **decifrar** (diferente da chave simétrica). Cifras de chave pública têm **três** algoritmos (para cifrar, para decifrar e para gerar chaves).
 
 Para **par de chaves**:
- - Input: Chave pública, Chave secreta
+ - Input: Tamanho da chave
  - Output: Par de chaves
 
 Para **cifrar**:
@@ -69,7 +69,7 @@ Semelhante ao anterior, porém o atacante obtém exemplos de texto cifrado antes
 #### Ataques com criptogramas escolhidos pelo atacante (Chosen ciphertext attack)
 É uma técnica de ataque que consiste em tentar descobrir a chave de cifra ou o texto-limpo a partir de um conjunto de textos-cifrados escolhidos pelo atacante, diferentes do texto que queremos cifrar.
 
-Nota: Não é uma técnica de criptanálise.
+Nota: *Brute-force* não é uma técnica de criptanálise.
 
 #### Ataque do homem no meio
 Este tipo de ataque é feito quando a **Pessoa A (Alice)** e a **Pessoa B (Bob)** estão sujeitos a um ataque por uma **Pessoa C (Claire)** que se encontra no meio da comunicação entre as duas pessoas. Existem dois tipos de ataque do homem no meio:
@@ -80,3 +80,5 @@ Este tipo de ataque é feito quando a **Pessoa A (Alice)** e a **Pessoa B (Bob)*
 Funções que dado um input de qualquer tamanho, produzem um output de um tamanho fixo. Estas funções são **one-way** (não há forma de obter o input a partir do output). 
 
 Nota: São **resistentes a colisões**, ou seja, é difícil encontrar dois inputs diferentes que produzam o mesmo output (em tempo útil). Também têm como propriedade a **resistência a previsão de uma pré-imagem** e a **resistência a previsão de uma segunda pré-imagem**, ou seja, é difícil encontrar um input que produza um output conhecido.
+
+Continua na [Aula 2](Aula2.md)

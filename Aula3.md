@@ -1,8 +1,6 @@
 # Aula 3 - Modos de Cifra
 
-## Cifra AES
-
-### *Eletronic Code Book* (ECB)
+## *Eletronic Code Book* (ECB)
 O **ECB** é um modo de operação de cifra que consiste em cifrar cada bloco de dados de forma independente. Ou seja, o bloco de dados é cifrado com a mesma chave, mas o resultado é diferente (caso os blocos não sejam iguais) para cada bloco de dados.
 
 Nota: **Não é recomendado** o uso para mensagens acima de 12 bytes não pseudo-aleatórios.
@@ -31,7 +29,7 @@ Exemplo para **decifrar**:
  - O último bloco necessita sempre de preenchimento.
  - Erros de sincronização são irrecuperáveis.
 
-### *Cipher Block Chaining* (CBC)
+## *Cipher Block Chaining* (CBC)
 O **CBC** é um modo de operação de cifra que consiste em cifrar cada bloco de dados de forma dependente do bloco anterior. Ou seja, o bloco de dados é cifrado com a mesma chave, mas o resultado é diferente (mesmo os blocos sendo iguais) para cada bloco de dados. Este método evita **alguns** ataques por maninupulação de blocos.
 
 Exemplo para **cifrar**:
@@ -65,7 +63,7 @@ O **padding** é uma técnica de preenchimento de dados que consiste em adiciona
 
 Nota: O último bloco tem sempre *padding*, mesmo que o bloco da mensagem seja múltiplo do tamanho do bloco da cifra é acrescentado um bloco de *padding*.
 
-### *Output Feeback Mode* (OFM)
+## *Output Feeback Mode* (OFM)
 O **OFM**  é um modo de operação de cifra que consiste em cifrar o IV com a chave e fazer o XOR entre o resultado e o bloco de texto-limpo.
 
 Exemplo a **cifrar**:
@@ -83,7 +81,7 @@ Exemplo a **cifrar**:
  - Sendo ela uma cifra de chave simétrica contínua, ela fica **maneável**.
  - Erros de perda bits são irrecuperáveis.
 
-### *Ciphertext Feedback Mode* (CFM)
+## *Ciphertext Feedback Mode* (CFM)
 O **CFM**  é um modo de operação de cifra que consiste em cifrar o IV com a chave e fazer o XOR entre o resultado e o bloco de texto-limpo. A diferença entre o CFM e o OFM é que o CFM usa o bloco de texto-cifrado anterior e não o IV cifrado.
 
 Exemplo a **cifrar**:
@@ -106,7 +104,8 @@ Exemplo a **decifrar**:
  - Sendo ela uma cifra de chave simétrica contínua, ela fica **maneável**.
  - Um erro pode propagar-se para os bits seguintes.
 
-### *Randomized Couter Mode* (CTR)
+## *Randomized Couter Mode* (CTR)
+
 O **CTR** é um modo de operação de cifra que consiste em cifrar através de uma chave de cifra de forma simétrica e continua a partir de uma cifra de blocos.
 
 Exemplo para **cifrar**:
@@ -128,3 +127,5 @@ Exemplo para **decifrar**:
 **Desvantagens** deste modo:
  - Sendo ela uma cifra de chave simétrica contínua, ela fica **maneável**.
  - Erros de perda bits são irrecuperáveis.
+
+Continua na [Aula 4](Aula4.md)

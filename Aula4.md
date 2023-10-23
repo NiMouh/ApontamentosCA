@@ -21,3 +21,5 @@ As **três formas** possíveis de combinar os dois mecanismos são:
  - *Encrypt then MAC*: Processo onde é calculado o MAC **através da mensagem cifrada** (e.g. IPsec).
 
 **Nota:** A forma considerada **correta** é a *encrypt then MAC*, e devem ser usadas **chaves diferentes** para o MAC e para a cifragrem.
+
+Continua na [Aula 5](Aula5.md)

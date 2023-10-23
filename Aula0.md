@@ -76,3 +76,6 @@ Funciona da seguinte forma:
 Nota: Cada chave deve ser usada apenas uma vez e escolhida aleatoriamente para cada texto-limpo a cifrar.
 
 É de notar que esta cifra tem **limitação**, pois a chave tem de ser **tão grande** quanto o **texto a cifrar** e usadas **apenas uma vez**. Algo que as cifras continuas convencionais **superam**, pois as mesmas permitem **chaves mais curtas** e uma **reutilização segura das chaves**.
+
+
+Continua na [Aula 1](Aula1.md)

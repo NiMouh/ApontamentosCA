@@ -6,6 +6,15 @@ Funções que dado um input de qualquer tamanho, produzem um output de um **tama
  - São **resistentes a colisões**, ou seja, é difícil encontrar dois inputs diferentes que produzam o mesmo output (em tempo útil). 
  - São **resistentes a previsão de uma pré-imagem** e a **resistência a previsão de uma segunda pré-imagem**, ou seja, é difícil encontrar um input que produza um output conhecido.
 
+### Funções de Hash Criptográficas (Abordagens)
+- Construção Merkle-Damgard: 
+  1. Divide o input em blocos de tamanho fixo e aplica uma função de compressão a cada bloco, sendo que o output da função de compressão é usado como input para a próxima iteração. 
+  2. O output final é o output da última iteração.
+  - Exemplo: MD5, SHA-1, SHA-2, SHA-3;
+- Funções esponja (Sponge Functions): 
+  1. **Absorção**: Atualiza um estado interno (pool de entropia) com blocos de input de tamanho fixo (padding é adicionado se necessário).
+  2. **Espremer (Squeezing)**: O output final é o output da última iteração.
+
 ## Rainbow Tables
 São tabelas que contêm **pares de valores** (input, output) de uma função de hash. Estas tabelas são usadas para encontrar o input a partir do output, mas para isso é necessário que o output esteja na tabela.
 

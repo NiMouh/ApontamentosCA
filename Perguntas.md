@@ -1,7 +1,6 @@
 # Frequência 2021
 
-6 - O protocolo Diffie-Helman pode ser implementado usando curvas elípticas.Explique como e indique qual é o problema matemático 
-que o torna "seguro"?
+6 - O protocolo Diffie-Helman pode ser implementado usando curvas elípticas.Explique como e indique qual é o problema matemático  que o torna "seguro"?
 Resposta: 
   - O protocolo Diffie-Helman pode ser implementado usando curvas elípticas, pois a operação de multiplicação de um ponto por um 
   escalar é computacionalmente difícil de ser invertida;
@@ -19,7 +18,7 @@ Resposta:
     - Alice: k = 5(3, 1) = (3, 29)
     - Bob: k = 3(3, 29) = (3, 29)
 
-  -O resultado será o mesmo para os dois, e esse resultado é a chave secreta compartilhada;
+  - O resultado será o mesmo para os dois, e esse resultado é a chave secreta compartilhada;
   O problema matemático que o torna "seguro" apresenta se da seguinte forma:
   - E o problema do logaritmo discreto, que consiste em encontrar o valor de x, dado y = g^x mod p, onde g e p são números primos 
   e x é um número inteiro; 

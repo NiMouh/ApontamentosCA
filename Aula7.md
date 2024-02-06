@@ -1,7 +1,7 @@
 # Aula 7
 
 ## Assinatura Digital
-As assinaturas digitais permitem, autenticar conteúdos de um documento (integridade), autenticar a origem do documento (autenticidade) e garantir a não repudiação (não negação da autoria).
+As assinaturas digitais permitem, autenticar conteúdos de um documento (integridade), autenticar a origem do documento (autenticidade) e garantir a não repúdio (não negação da autoria).
 
 ### Esquema de assinatura digital
 Recorrendo a chaves públicas (nomeadamente RSA), são usados **três** algoritmos:

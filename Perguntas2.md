@@ -8,7 +8,10 @@ R: Os certificados de chave pública desempenham um papel crucial, pois atestam 
     a. Como se estabelece esse período de validade?
     b. Qual a relação que terá de ser verificada entre esse período de validade e uma assinatura realizada com a respetiva chave privada?
 
-R: Os pares de chaves têm um período de validade limitado para proteger contra comprometimento da chave privada. Os certificados de chave pública, com validade estabelecida pela autoridade certificadora, garantem essa limitação. A relação crítica a ser verificada com a assinatura é temporal: se dentro do período de validade do certificado, a assinatura é válida; caso contrário, é considerada inválida.
+R:
+a. Este periodo de validade é estabelecido ou pela própria máquina que produz a assinatura ou por uma entidade de confiança (TSA ou Time Stamping Autority). 
+
+b. A relação crítica a ser verificada com a assinatura é temporal: se dentro do período de validade do certificado, a assinatura é válida; caso contrário, é considerada inválida.
 
 3. Como é que é normalmente indicada a identidade de uma entidade que produz uma assinatura de um documento? Explique porquê.
 
